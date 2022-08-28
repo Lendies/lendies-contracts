@@ -8,8 +8,8 @@ Clone the repo:
 git clone git@github.com:Lendies/lendies-contracts.git
 ```
 
-To initialize a Node.js project its recommended by hardhat to use npm:
-Init:
+To initialize the project its recommended by hardhat to use npm:
+
 ```shell
 npm init
 ```
