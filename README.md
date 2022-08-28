@@ -47,7 +47,7 @@ PRIVATE_KEY="YOURS3CRETKEY"
 POLYGONSCAN_API_KEY="YOURSECRETKEYGOESHERE"
 ```
 
-> **_NOTE:_**  The POLYGONSCAN_API_KEY is to verify your contract. You can generate an API key by [creating an account](https://polygonscan.com/register)
+> **_NOTE:_**  The POLYGONSCAN_API_KEY is optional and it's to verify your contract. You can generate an API key by [creating an account](https://polygonscan.com/register)
 
 ### Compiling the contract
 
