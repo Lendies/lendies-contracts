@@ -11,36 +11,12 @@ git clone git@github.com:Lendies/lendies-contracts.git
 To initialize the project its recommended by hardhat to use npm:
 
 ```shell
-npm init
-```
-
-Then you need to install Hardhat:
-
-```shell
-npm install --save-dev hardhat
-```
-
-Try running some of the following tasks:
-
-```shell
-npx hardhat help
-npx hardhat test
-GAS_REPORT=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
+npm i
 ```
 
 ### To deploy this contracts in the mumbai testnet:
 
-
-Install `dotenv` locally:
-
-```shell
-npm install dotenv --save
-```
-
 Create a `.env` file in the root of your project:
-
 
 ```dosini
 PRIVATE_KEY="YOURS3CRETKEY"
@@ -50,12 +26,6 @@ POLYGONSCAN_API_KEY="YOURSECRETKEYGOESHERE"
 > **_NOTE:_**  The POLYGONSCAN_API_KEY is optional and it's to verify your contract. You can generate an API key by [creating an account](https://polygonscan.com/register)
 
 ### Compiling the contract
-
-To compile the contract, you first need to install Hardhat Toolbox:
-
-```shell
-npm install --save-dev @nomicfoundation/hardhat-toolbox @nomiclabs/hardhat-ethers
-```
 
 #### Run to compile:
 
@@ -69,7 +39,7 @@ npx hardhat compile
 npx hardhat test
 ```
 
-#### Run tu deploy on matic network:
+#### Run to deploy on matic network:
 
 ```shell
 npx hardhat run scripts/deploy.js --network matic
@@ -78,7 +48,7 @@ npx hardhat run scripts/deploy.js --network matic
 
 The contract will be deployed on Matic's Mumbai Testnet, and you can check the deployment status here: https://mumbai.polygonscan.com/
 
-#### To verify your contract(optional):
+#### To verify your contract (optional):
 
 ```shell
 npm install --save-dev @nomiclabs/hardhat-etherscan
