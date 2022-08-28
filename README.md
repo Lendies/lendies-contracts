@@ -2,6 +2,24 @@
 
 This project contains the solidity contracts used in Lendies. It comes with [Hardhat Tool-Box](https://hardhat.org/hardhat-runner/docs/getting-started#overview) for easy deployment and testing.
 
+Clone the repo:
+
+```shell
+git clone git@github.com:Lendies/lendies-contracts.git
+```
+
+To initialize a Node.js project its recommended by hardhat to use npm:
+Init:
+```shell
+npm init
+```
+
+Then you need to install Hardhat:
+
+```shell
+npm install --save-dev hardhat
+```
+
 Try running some of the following tasks:
 
 ```shell
