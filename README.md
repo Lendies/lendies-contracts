@@ -7,7 +7,7 @@ Clone the repo:
 ```shell
 git clone git@github.com:Lendies/lendies-contracts.git
 ```
-
+Node v18.8.0 and NPM v8.18.0 where used for the development of this project.
 To initialize the project its recommended by hardhat to use npm:
 
 npm
