@@ -52,6 +52,7 @@ PRIVATE_RPC="PrivateRPCURL"
 ```
 
 > **_NOTE:_**  The POLYGONSCAN_API_KEY is required. You can generate an API key by [creating an account](https://polygonscan.com/register)
+> **_NOTE2:_** You can generate an RPC url using [maticvigil](https://rpc.maticvigil.com/)
 
 ### Compiling the contracts
 
