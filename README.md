@@ -10,22 +10,50 @@ git clone git@github.com:Lendies/lendies-contracts.git
 
 To initialize the project its recommended by hardhat to use npm:
 
+npm
 ```shell
-npm i
+npm i 
 ```
+
+yarn
+```bash
+yarn
+```
+
+## Solidity Contracts:
+
+### Redirect All
+
+The [redirect all contract](./contracts/RedirectAll.sol) contains the
+logic that can "react" to the creation, updating, and deletion of a stream via
+a callback. These callbacks redirect any incoming stream to a given receiver's
+address.
+
+### Tradeable Cash Flow
+
+The [tradable cashflow contract](./contracts/TradeableCashflow.sol) contains
+ERC721 NFT logic, inheriting Open Zeppelin's implementations. It also inherits
+the `RedirectAll.sol` logic. In this implementation, the receiver of the stream
+is changed on-transfer through the Open Zeppelin ERC721 `_beforeTransfer` hook.
+
+### Lendies Core
+
+The [lendies core contract](./contracts/LendiesCore.sol) contains the login for the creation of Loans. It is possible for a Borrower to request a loan (Filling the Amount, Desired Monthly Payment, and Maximum Interest Rate), which is published as an event and is publicly visible. Loaners can make an offer on the request (Setting their preferred interest rate). If a borrower accepts this offer, the amount will be transfered from the Loaner to the Borrower, and a cashstream will be opened from the Borrower to the Loaner with the predefinied monthly payment and interest rate as parameters.
+
 
 ### To deploy this contracts in the mumbai testnet:
 
 Create a `.env` file in the root of your project:
 
 ```dosini
-PRIVATE_KEY="YOURS3CRETKEY"
-POLYGONSCAN_API_KEY="YOURSECRETKEYGOESHERE"
+PRIVATE_KEY="YourSecretKey"
+POLYGONSCAN_API_KEY="YouRApiKey"
+PRIVATE_RPC="PrivateRPCURL"
 ```
 
-> **_NOTE:_**  The POLYGONSCAN_API_KEY is optional and it's to verify your contract. You can generate an API key by [creating an account](https://polygonscan.com/register)
+> **_NOTE:_**  The POLYGONSCAN_API_KEY is required. You can generate an API key by [creating an account](https://polygonscan.com/register)
 
-### Compiling the contract
+### Compiling the contracts
 
 #### Run to compile:
 

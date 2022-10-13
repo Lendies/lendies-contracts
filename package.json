@@ -1,13 +1,32 @@
 {
-  "devDependencies": {
-    "@nomicfoundation/hardhat-toolbox": "^1.0.2",
-    "@nomiclabs/hardhat-ethers": "^2.1.1",
-    "ethers": "^5.7.0",
-    "hardhat": "^2.10.2"
-  },
-  "dependencies": {
-    "@superfluid-finance/ethereum-contracts": "^1.3.1",
-    "@superfluid-finance/sdk-core": "^0.5.4",
-    "dotenv": "^16.0.1"
-  }
+    "name": "lendies",
+    "version": "1.0.0",
+    "description": "Lendies - a tradeable cashflow contract and lendies core",
+    "scripts": {
+        "build": "hardhat compile",
+        "test": "hardhat test",
+        "deploy": "npm run build && RELEASE_VERSION=v1 npx truffle --network goerli exec scripts/deploy.js",
+        "copy-watch": "nodemon --watch \"../../packages\" --ext \"js,ts,tsx,sol\" --exec rsync --archive --delete \"../../packages/\" \"./node_modules/@superfluid-finance/\""
+    },
+    "author": "Superfluid",
+    "license": "MIT",
+    "dependencies": {
+        "@nomiclabs/hardhat-ethers": "^2.0.5",
+        "@nomiclabs/hardhat-truffle5": "^2.0.2",
+        "@nomiclabs/hardhat-waffle": "^2.0.3",
+        "@nomiclabs/hardhat-web3": "^2.0.0",
+        "@openzeppelin/contracts": "^4.7.3",
+        "@superfluid-finance/ethereum-contracts": "^1.4.1",
+        "@superfluid-finance/sdk-core": "^0.5.6",
+        "chai": "^4.3.6",
+        "dotenv": "^16.0.3",
+        "ethereum-waffle": "^3.4.4",
+        "ethers": "^5.7.1",
+        "ganache-time-traveler": "^1.0.16",
+        "graphql": "^16.3.0",
+        "hardhat": "^2.12.0",
+        "hardhat-deploy": "^0.11.18",
+        "mocha": "^10.0.0",
+        "web3": "^1.8.0"
+    }
 }
