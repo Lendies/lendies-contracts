@@ -68,12 +68,17 @@ npx hardhat compile
 npx hardhat test
 ```
 
-#### Run to deploy on matic network:
+#### Run to deploy a specific contract on MUMBAI network:
 
 ```shell
-npx hardhat run scripts/deploy.js --network matic
+npx hardhat run scripts/<deploy-file>.js --network mumbai
 ```
 
+#### Run to deploy all contracts on MUMBAI network:
+
+```shell
+npx hardhat deploy --network mumbai
+```
 
 The contract will be deployed on Matic's Mumbai Testnet, and you can check the deployment status here: https://mumbai.polygonscan.com/
 
@@ -81,5 +86,5 @@ The contract will be deployed on Matic's Mumbai Testnet, and you can check the d
 
 ```shell
 npm install --save-dev @nomiclabs/hardhat-etherscan
-npx hardhat verify --network matic 0x4b75233D4FacbAa94264930aC26f9983e50C11AF
+npx hardhat verify --network matic CONTRACT_ADDRESS
 ```
